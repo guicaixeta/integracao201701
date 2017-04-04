@@ -37,7 +37,7 @@ Link | Descrição
 
 ### 3.3. Solução Preliminar
 #### Modelo arquitetural
-![Modelo prévio da arquitetura](./index/Modelagem De Dados.png)
+![Modelo prévio da arquitetura](https://github.com/PedroDrim/integracao201701/blob/master/Anexos/Modelagem%20De%20Dados.png?raw=true)
 #### Detalhamento da arquitetura
 
 ## 4. Conclusão 
