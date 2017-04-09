@@ -4,89 +4,65 @@
  * and open the template in the editor.
  */
 package com.mycompany.horus;
+import javax.xml.soap.*;
+import javax.xml.namespace.QName;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPConnection;
-import javax.xml.soap.SOAPConnectionFactory;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPEnvelope;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPPart;
-import javax.xml.transform.Source;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.stream.StreamResult;
-
-/**
- *
- * @author aluno
- */
 public class Teste {
 
-    private static SOAPMessage createSoapRequest() throws Exception {
+    public static void main(String args[]) throws Exception {
+        // Creating SOAP Connection
+        SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
+        SOAPConnection soapConnection = soapConnectionFactory.createConnection();
 
+        // Sending SOAP Message to SOAP Server
+        String url = "https://servicos.saude.gov.br/horus/v1r0/EstoqueService?WSDL";
+        SOAPMessage soapResponse = soapConnection.call(createSOAPRequest(), url);
+
+        // print SOAP Response
+        System.out.println("Response SOAP Message:");
+        soapResponse.writeTo(System.out);
+
+        soapConnection.close();
+    }
+
+    private static SOAPMessage createSOAPRequest() throws Exception {
         MessageFactory messageFactory = MessageFactory.newInstance();
-
         SOAPMessage soapMessage = messageFactory.createMessage();
-
         SOAPPart soapPart = soapMessage.getSOAPPart();
 
-        SOAPEnvelope soapEnvelope = soapPart.getEnvelope();
-        soapEnvelope.addNamespaceDeclaration("end", "http://endpoint.concretepage.com/");
+        SOAPHeader header = soapMessage.getSOAPHeader();
+        SOAPBody body = soapMessage.getSOAPBody();
 
-        SOAPBody soapBody = soapEnvelope.getBody();
+        QName bodyName = new QName(
+                "requestConsultarPosicaoPorEstoqueCNES", "est");
 
-        SOAPElement soapElement = soapBody.addChildElement("getWelcomeMsg", "end");
-        SOAPElement element1 = soapElement.addChildElement("arg0");
-        element1.addTextNode("EveryOne");
+        SOAPBodyElement bodyElement = body.addBodyElement(bodyName);
+        QName name = new QName("cnes","cnes","est");
+        SOAPElement symbol = bodyElement.addChildElement(name);
+        symbol.addTextNode("CNES");
 
+
+        /*
+        String serverURI = "http://schemas.xmlsoap.org/wsdl/";
+
+        // SOAP Envelope
+        SOAPEnvelope envelope = soapPart.getEnvelope();
+
+        envelope.addNamespaceDeclaration("example", serverURI);
+
+        MimeHeaders headers = soapMessage.getMimeHeaders();
+        headers.addHeader("SOAPAction", serverURI  + "VerifyEmail");
+        headers.addHeader("Teste", "valor de teste");
+
+        */
         soapMessage.saveChanges();
 
-        System.out.println("----------SOAP Request------------");
+        /* Print the request message */
+        System.out.println("Request SOAP Message:");
         soapMessage.writeTo(System.out);
+        System.out.println();
+
         return soapMessage;
     }
 
-    private static void createSoapResponse(SOAPMessage soapResponse) throws Exception {
-        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-        Transformer transformer = transformerFactory.newTransformer();
-
-        Source sourceContent = soapResponse.getSOAPPart().getContent();
-        System.out.println("\n----------SOAP Response-----------");
-
-        File file = new File("horusExit.txt");
-        FileOutputStream fop = new FileOutputStream(file);
-
-        if (!file.exists()) {
-            file.createNewFile();
-        }
-
-
-        StreamResult result = new StreamResult(file);
-        transformer.transform(sourceContent, result);
-        
-        fop.flush();
-        fop.close();
-    }
-
-    public static void main(String args[]) {
-        try {
-            SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
-            SOAPConnection soapConnection = soapConnectionFactory.createConnection();
-
-            String url = "https://servicos.saude.gov.br/horus/v1r0/EstoqueService?WSDL";
-
-            SOAPMessage soapRequest = createSoapRequest();
-            SOAPMessage soapResponse = soapConnection.call(soapRequest, url);
-
-            createSoapResponse(soapResponse);
-            soapConnection.close();
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 }
