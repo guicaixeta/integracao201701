@@ -8,13 +8,13 @@ Este sistema foi desenvolvido focado no meio acadêmico, entretanto possui a pre
 ### 2.1. Integrantes
 Nome | Função | Contato
 -----|--------|--------
-Lucena | Professor / Avaliador | ?
-Gabriel Nunez | ? | ?
+Fabio Lucena | Professor / Avaliador | ?
+Gabriel Nuñez | ? | g.nunez.coutinho@gmail.com
 Pedro Henrique | ? | pedrohenriquedrim@gmail.com
 Vinícius Machado | ? | ?
 Lucas Nunes | ? | ?
-Guilherme Caexeta | ? | ?
-Valker Diniz | ? | ?
+Guilherme Caixeta | ? | ?
+Valquer Diniz | ? | ?
 
 ### 2.2. Cronogramas
 
@@ -23,7 +23,7 @@ Valker Diniz | ? | ?
 ## 3. Questionamentos
 
 ### 3.1. Escopo
-#### Qual é o trabalho (escopo)?
+Trata-se da prática de integração de um ambiente qualquer ao sistema **HORUS** do Ministério da Saúde, por meio do uso de webservices.
 
 ### 3.2. Documentação Auxiliar
 #### Onde encontrar detalhes sobre o trabalho (links)?
