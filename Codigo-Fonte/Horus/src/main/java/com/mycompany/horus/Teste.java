@@ -4,18 +4,25 @@
  * and open the template in the editor.
  */
 package com.mycompany.horus;
-import javax.xml.soap.*;
+
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import javax.xml.namespace.QName;
-import java.io.*;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.DocumentBuilder;
-import org.xml.sax.InputSource;
-import org.w3c.dom.Document;
+import javax.xml.soap.MessageFactory;
+import javax.xml.soap.SOAPBody;
+import javax.xml.soap.SOAPBodyElement;
+import javax.xml.soap.SOAPConnection;
+import javax.xml.soap.SOAPConnectionFactory;
+import javax.xml.soap.SOAPElement;
+import javax.xml.soap.SOAPHeader;
+import javax.xml.soap.SOAPMessage;
+import javax.xml.soap.SOAPPart;
 
 public class Teste {
 
     public static void main(String args[]) throws Exception {
         // Creating SOAP Connection
+
         try {
             SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
             SOAPConnection soapConnection = soapConnectionFactory.createConnection();
@@ -29,11 +36,13 @@ public class Teste {
             soapResponse.writeTo(out);
             String strMsg = new String(out.toByteArray());
             stringToDom(strMsg);
-            
+
             soapConnection.close();
-        }catch(Exception e){
+
+            XmlParser test = new XmlParser();
+            test.getServices("teste.xml");
+        } catch (Exception e) {
             System.err.println("Error occurred while sending SOAP Request to Server");
-            e.printStackTrace();
         }
     }
 
@@ -56,7 +65,7 @@ public class Teste {
                 "requestConsultarPosicaoPorEstoqueCNES", "est");
 
         SOAPBodyElement bodyElement = body.addBodyElement(bodyName);
-        QName name = new QName("cnes","cnes","est");
+        QName name = new QName("cnes", "cnes", "est");
         SOAPElement symbol = bodyElement.addChildElement(name);
         symbol.addTextNode("CNES");
 
@@ -73,7 +82,7 @@ public class Teste {
         headers.addHeader("SOAPAction", serverURI  + "VerifyEmail");
         headers.addHeader("Teste", "valor de teste");
 
-        */
+         */
         soapMessage.saveChanges();
 
         /* Print the request message */
