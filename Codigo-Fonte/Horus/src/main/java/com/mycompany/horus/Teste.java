@@ -5,46 +5,61 @@
  */
 package com.mycompany.horus;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
-import javax.xml.namespace.QName;
-import javax.xml.soap.MessageFactory;
-import javax.xml.soap.SOAPBody;
-import javax.xml.soap.SOAPBodyElement;
-import javax.xml.soap.SOAPConnection;
-import javax.xml.soap.SOAPConnectionFactory;
-import javax.xml.soap.SOAPElement;
-import javax.xml.soap.SOAPHeader;
-import javax.xml.soap.SOAPMessage;
-import javax.xml.soap.SOAPPart;
+import org.apache.http.HttpEntity;
+import org.apache.http.HttpResponse;
+import org.apache.http.client.HttpClient;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.util.EntityUtils;
 
 public class Teste {
 
-    public static void main(String args[]) throws Exception {
-        // Creating SOAP Connection
 
+    public static void main(String[] args) throws Exception {
+        String soapBody="<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:est=\"http://servicos.saude.gov.br/horus/v1r0/EstoqueService\">\n" +
+                " <soap:Header>\n" +
+                " <wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wsswssecurity-secext-1.0.xsd\">\n" +
+                " <wsse:UsernameToken wsu:Id=\"Id-0001334008436683-000000002c4a1908-1\" xmlns:wsu=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd\">\n" +
+                " <wsse:Username>HORUS</wsse:Username>\n" +
+                " <wsse:Password Type=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wssusername-token-profile-1.0#PasswordText\">SENHA</wsse:Password>\n" +
+                " </wsse:UsernameToken>\n" +
+                " </wsse:Security>\n" +
+                " </soap:Header>\n" +
+                " <soap:Body><est:requestConsultarPosicaoEstoquePorCNES>\n" +
+                " <est:cnes>7604041</est:cnes>\n" +
+                " </est:requestConsultarPosicaoEstoquePorCNES>\n" +
+                " </soap:Body>\n" +
+                "</soap:Envelope>\n";
         try {
-            SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();
-            SOAPConnection soapConnection = soapConnectionFactory.createConnection();
+            // Get target URL
+            HttpClient httpclient = new DefaultHttpClient();
 
-            // Sending SOAP Message to SOAP Server
-            String url = "https://servicos.saude.gov.br/horus/v1r0/EstoqueService?WSDL";
-            SOAPMessage soapResponse = soapConnection.call(createSOAPRequest(), url);
+            StringEntity strEntity = new StringEntity(soapBody, "text/xml", "UTF-8");
+            HttpPost post = new HttpPost("https://servicos.saude.gov.br/horus/v1r0/EstoqueService");
+            post.setEntity(strEntity);
 
-            //Changing response to Xml file
-            ByteArrayOutputStream out = new ByteArrayOutputStream();
-            soapResponse.writeTo(out);
-            String strMsg = new String(out.toByteArray());
-            stringToDom(strMsg);
-
-            soapConnection.close();
-
-            XmlParser test = new XmlParser();
-            test.getServices("teste.xml");
-        } catch (Exception e) {
-            System.err.println("Error occurred while sending SOAP Request to Server");
+            // Execute request
+            HttpResponse response = httpclient.execute(post);
+            HttpEntity respEntity = response.getEntity();
+            String resp = EntityUtils.toString(respEntity);
+            if (respEntity != null) {
+                System.out.println("Response:");
+                System.out.println(resp);
+                //Changing response to Xml file
+                stringToDom(resp);
+                XmlParser test = new XmlParser();
+                test.getServices("teste.xml");
+            } else {
+                System.out.println("No Response");
+            }
+        }
+        catch (Exception e) {
+            System.out.println("Other exception = " + e.toString());
         }
     }
+
 
     public static void stringToDom(String xmlSource)
             throws IOException {
@@ -52,45 +67,4 @@ public class Teste {
         fw.write(xmlSource);
         fw.close();
     }
-
-    private static SOAPMessage createSOAPRequest() throws Exception {
-        MessageFactory messageFactory = MessageFactory.newInstance();
-        SOAPMessage soapMessage = messageFactory.createMessage();
-        SOAPPart soapPart = soapMessage.getSOAPPart();
-
-        SOAPHeader header = soapMessage.getSOAPHeader();
-        SOAPBody body = soapMessage.getSOAPBody();
-
-        QName bodyName = new QName(
-                "requestConsultarPosicaoPorEstoqueCNES", "est");
-
-        SOAPBodyElement bodyElement = body.addBodyElement(bodyName);
-        QName name = new QName("cnes", "cnes", "est");
-        SOAPElement symbol = bodyElement.addChildElement(name);
-        symbol.addTextNode("CNES");
-
-
-        /*
-        String serverURI = "http://schemas.xmlsoap.org/wsdl/";
-
-        // SOAP Envelope
-        SOAPEnvelope envelope = soapPart.getEnvelope();
-
-        envelope.addNamespaceDeclaration("example", serverURI);
-
-        MimeHeaders headers = soapMessage.getMimeHeaders();
-        headers.addHeader("SOAPAction", serverURI  + "VerifyEmail");
-        headers.addHeader("Teste", "valor de teste");
-
-         */
-        soapMessage.saveChanges();
-
-        /* Print the request message */
-        System.out.println("Request SOAP Message:");
-        soapMessage.writeTo(System.out);
-        System.out.println();
-
-        return soapMessage;
-    }
-
 }
