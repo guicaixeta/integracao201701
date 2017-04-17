@@ -13,6 +13,9 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import java.io.IOException;
 
 public class Teste {
 
@@ -34,9 +37,10 @@ public class Teste {
                 "</soap:Envelope>\n";
         try {
             // Get target URL
-            HttpClient httpclient = new DefaultHttpClient();
 
-            StringEntity strEntity = new StringEntity(soapBody, "text/xml", "UTF-8");
+            CloseableHttpClient httpclient = HttpClientBuilder.create().build();
+            StringEntity strEntity = new StringEntity(soapBody,"UTF-8");
+            strEntity.setContentType("text/xml");
             HttpPost post = new HttpPost("https://servicos.saude.gov.br/horus/v1r0/EstoqueService");
             post.setEntity(strEntity);
 
