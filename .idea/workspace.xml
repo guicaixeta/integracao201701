@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff15fabd-34d8-425c-9952-08a2008beb29" name="Default" comment="" />
+    <list default="true" id="ff15fabd-34d8-425c-9952-08a2008beb29" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/Teste.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/XmlParser.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/EstoqueFault.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/EstoqueService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/EstoqueServicePortType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/MSFalha.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/MensagemType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/MunicipioType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/ObjectFactory.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/PaginacaoType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/PosicaoEstoqueType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/ProdutoType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/RequestConsultarPosicaoEstoquePorCNES.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/RequestConsultarPosicaoEstoquePorCNESPrincipioAtivo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/RequestConsultarPosicaoEstoquePorCNESPrincipioAtivoPaginado.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/RequestConsultarProdutoPorCNESDispensacao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/RequestConsultarProdutoPorCNESDispensacaoPaginado.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/ResponseConsultarPosicaoEstoquePorCNES.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/ResponseConsultarPosicaoEstoquePorCNESPrincipioAtivo.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/ResponseConsultarPosicaoEstoquePorCNESPrincipioAtivoPaginado.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/ResponseConsultarProdutoPorCNESDispensacao.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/ResponseConsultarProdutoPorCNESDispensacaoPaginado.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/UFType.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/classes/com/mycompany/horus/ws/package-info.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/java/com/mycompany/horus/Teste.java" afterPath="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/java/com/mycompany/horus/Teste.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +45,8 @@
       <file leaf-file-name="Teste.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/java/com/mycompany/horus/Teste.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+            <state relative-caret-position="304">
+              <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -37,6 +65,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -59,11 +90,12 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="43" />
-    <option name="width" value="1260" />
-    <option name="height" value="689" />
+    <option name="x" value="7" />
+    <option name="y" value="32" />
+    <option name="width" value="1263" />
+    <option name="height" value="700" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -79,6 +111,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -113,7 +146,6 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -578,19 +610,20 @@
       <workItem from="1491778368428" duration="1601000" />
       <workItem from="1492352750797" duration="4206000" />
       <workItem from="1492386275723" duration="1722000" />
+      <workItem from="1492468250548" duration="59000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7529000" />
+    <option name="totallyTimeSpent" value="7588000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="43" width="1260" height="689" extended-state="0" />
+    <frame x="7" y="32" width="1263" height="700" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -598,12 +631,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24940617" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -615,6 +648,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -634,6 +668,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/java/com/mycompany/horus/Teste.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="376" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="880" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/java/com/mycompany/horus/Teste.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -672,8 +724,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Codigo-Fonte/Horus/src/main/java/com/mycompany/horus/Teste.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        <state relative-caret-position="304">
+          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

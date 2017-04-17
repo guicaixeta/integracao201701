@@ -68,4 +68,24 @@ public class Teste {
         fw.write(xmlSource);
         fw.close();
     }
+    public static String getWsdlServicos() throws IOException {
+        String resp;
+        CloseableHttpClient httpclient = HttpClientBuilder.create().build();
+        HttpPost post = new HttpPost("https://servicos.saude.gov.br/horus/v1r0/EstoqueService?WSDL");
+        HttpResponse response = httpclient.execute(post);
+        HttpEntity respEntity = response.getEntity();
+        resp = EntityUtils.toString(respEntity);
+        return resp;
+    }
+
+    public static String getWsdlParametros() throws IOException {
+        String resp;
+        CloseableHttpClient httpclient = HttpClientBuilder.create().build();
+        HttpPost post = new HttpPost("https://servicos.saude.gov.br/horus/v1r0/EstoqueService?WSDL&type=XSD&file=schema%3A0f2d6d57-3e90-42d7-851c-c68e7b203254");
+        HttpResponse response = httpclient.execute(post);
+        HttpEntity respEntity = response.getEntity();
+        resp = EntityUtils.toString(respEntity);
+        return resp;
+    }
+
 }
