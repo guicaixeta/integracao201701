@@ -14,7 +14,7 @@ Pedro Henrique | ? | pedrohenriquedrim@gmail.com
 Vinícius Machado | ? | ?
 Lucas Nunes | ? | ?
 Guilherme Caixeta | ? | ?
-Valquer Diniz | ? | ?
+Valquer Diniz | ? | valquernovaes@hotmail.com
 
 ### 2.2. Cronogramas
 
