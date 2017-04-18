@@ -18,6 +18,10 @@ public class Teste {
 
 
     public static void main(String[] args) throws Exception {
+        
+        ServiceListener list = new ServiceListener();
+        list.getHorusServicesList();
+        
         String soapBody="<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:est=\"http://servicos.saude.gov.br/horus/v1r0/EstoqueService\">\n" +
                 " <soap:Header>\n" +
                 " <wsse:Security xmlns:wsse=\"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wsswssecurity-secext-1.0.xsd\">\n" +
@@ -50,8 +54,7 @@ public class Teste {
                 System.out.println(resp);
                 //Changing response to Xml file
                 stringToDom(resp);
-                XmlParser test = new XmlParser();
-                test.getServices("teste.xml");
+                
             } else {
                 System.out.println("No Response");
             }
@@ -68,24 +71,6 @@ public class Teste {
         fw.write(xmlSource);
         fw.close();
     }
-    public static String getWsdlServicos() throws IOException {
-        String resp;
-        CloseableHttpClient httpclient = HttpClientBuilder.create().build();
-        HttpPost post = new HttpPost("https://servicos.saude.gov.br/horus/v1r0/EstoqueService?WSDL");
-        HttpResponse response = httpclient.execute(post);
-        HttpEntity respEntity = response.getEntity();
-        resp = EntityUtils.toString(respEntity);
-        return resp;
-    }
-
-    public static String getWsdlParametros() throws IOException {
-        String resp;
-        CloseableHttpClient httpclient = HttpClientBuilder.create().build();
-        HttpPost post = new HttpPost("https://servicos.saude.gov.br/horus/v1r0/EstoqueService?WSDL&type=XSD&file=schema%3A0f2d6d57-3e90-42d7-851c-c68e7b203254");
-        HttpResponse response = httpclient.execute(post);
-        HttpEntity respEntity = response.getEntity();
-        resp = EntityUtils.toString(respEntity);
-        return resp;
-    }
+    
 
 }
