@@ -1,4 +1,4 @@
-# **HORUS** (DATASUS)
+﻿# **HORUS** (DATASUS)
 
 ## 1. Descrição
 Este sistema foi desenvolvido focado no meio acadêmico, entretanto possui a premissa de funcionar como uma biblioteca para a integração com o sistema **HORUS** do departamento de informática do SUS (**DATASUS**).
@@ -13,7 +13,7 @@ Gabriel Nuñez | ? | g.nunez.coutinho@gmail.com
 Pedro Henrique | ? | pedrohenriquedrim@gmail.com
 Vinícius Machado | ? | ?
 Lucas Nunes | ? | ?
-Guilherme Caixeta | ? | ?
+Guilherme Caixeta | ? | caixetag@gmail.com
 Valquer Diniz | ? | valquernovaes@hotmail.com
 
 ### 2.2. Cronogramas
